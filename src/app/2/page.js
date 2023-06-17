@@ -16,6 +16,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         {content.map((entry, i) => (
           <Inner
+          key={i}
             i={i}
             entry={entry}
             index={index}

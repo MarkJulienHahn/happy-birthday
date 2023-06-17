@@ -36,7 +36,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.listWrapper}>
           {places.map((place, i) => (
-            <ListEntry place={place} setNext={setNext} />
+            <ListEntry key={i} place={place} setNext={setNext} />
           ))}
         </div>
       </main>

@@ -34,6 +34,7 @@ export default function Home() {
           <div className={styles.listWrapperActivities}>
             {places.map((place, i) => (
               <ListEntry
+                key={i}
                 place={place}
                 complete={complete}
                 setComplete={setComplete}
