@@ -1,9 +1,6 @@
-import './globals.css'
+"use client"
 
-export const metadata = {
-  title: 'Create Next App',
-  description: "",
-}
+import './globals.css'
 
 export default function RootLayout({ children }) {
   return (

@@ -1,43 +1,41 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import styles from "../page.module.css";
 
-import img01 from "../../../public/img01.png";
-
-const places = [
-  { name: "Anfahrt", answer: "🚙 🎶 🗺" },
-  { name: "Zwischenstopp", answer: "⛪️ 🛍 🖼 🌭" },
-  { name: "Unterkunft", answer: "⛺️ 🏝 " },
-  { name: "Aktivitäten", answer: "🌊 🌳 🍹 ☀️" },
-  { name: "Essen", answer: "🦪 🦀 🍝" },
-  { name: "Zeitpunkt", answer: "asap ⏰" },
-];
-
 export default function Home() {
+  const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [complete, setComplete] = useState(0);
   const [ender, setEnder] = useState(false);
 
   const showEnder = () => setEnder(true);
 
   useEffect(() => {
-    complete == places.length && setTimeout(showEnder, 2000);
+    const storedPlaces = JSON.parse(localStorage.getItem("selectedPlaces"));
+    if (storedPlaces) {
+      setSelectedPlaces(storedPlaces);
+    }
+  }, []);
+
+  useEffect(() => {
+    complete == 5 && setTimeout(showEnder, 3000);
   }, [complete]);
 
   return (
     <>
       {!ender ? (
         <main className={styles.main}>
-          <p className={styles.header}>Folgendes wird uns erwarten:</p>
+          <p className={styles.header}>
+            Hier die Ergebnisse des Konfigurators:
+          </p>
           <div className={styles.listWrapperActivities}>
-            {places.map((place, i) => (
+            {selectedPlaces.map((place, i) => (
               <ListEntry
                 key={i}
                 place={place}
                 complete={complete}
                 setComplete={setComplete}
+                final={true}
               />
             ))}
           </div>
@@ -58,7 +56,13 @@ export function ListEntry({ place, setComplete, complete }) {
   }, [clicked]);
   return (
     <h2 onClick={() => setClicked(true)}>
-      {!clicked ? place.name : place.answer}
+      {!clicked ? (
+        place.name
+      ) : (
+        <span style={{ color: "lightblue", cursor: "default" }}>
+          {place.explanation}
+        </span>
+      )}
     </h2>
   );
 }

@@ -57,17 +57,23 @@
   z-index: 1;
 }
 
-.listWrapper h2, .listWrapperActivities h2 {
+.listWrapper h2,
+.listWrapperActivities h2 {
   cursor: pointer;
 }
 
-.listWrapper h2:hover, .listWrapperActivities h2:hover {
+.listWrapper h2:hover,
+.listWrapperActivities h2:hover {
   color: pink;
 }
 
 .clicked {
-  color: red;
-  pointer-events: none;
+  color: rgb(0, 255, 0);
+  /* pointer-events: none; */
+}
+
+.clicked h2:hover {
+  color: rgb(255, 0, 0) !important;
 }
 
 /* .clicked:hover {
@@ -90,7 +96,7 @@
 }
 
 .next h3 {
-  background: transparent;
+  background: rgb(254, 222, 247);
   padding: 20px 40px;
   border: 10px solid rgb(0, 255, 0);
   border-radius: 100px;
@@ -126,11 +132,23 @@
   padding: 10vw;
   line-height: 23vh;
   color: rgb(0, 255, 0);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .header {
   padding-top: 40px;
+  width: 100vw;
+  text-align: center;
+}
+
+.counter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 40pt;
+  z-index: 100;
+  color: rgb(0, 255, 0);
+  pointer-events: none;
   width: 100vw;
   text-align: center;
 }

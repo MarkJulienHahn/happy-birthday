@@ -4,7 +4,33 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "../page.module.css";
 
-const content = ["Dein", "Geschenk", "ist", "ein","all", "inclusive", "Ausflug", "nach"];
+const content = [
+  "",
+  "Dafür",
+  "habe",
+  "ich",
+  "dir",
+  "dieses",
+  "Jahr",
+  "einen",
+  "Konfigurator",
+  "programmiert",
+  "...",
+  "Mit",
+  "dem",
+  "kannst",
+  "du",
+  "dir",
+  "deinen",
+  "eigenen",
+  "perfekten",
+  "Ausflug",
+  "selbst",
+  "zusammen-",
+  "stellen",
+  "!",
+  "",
+];
 
 const visible = { opacity: 1 };
 const hidden = { opacity: 0 };
@@ -16,7 +42,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         {content.map((entry, i) => (
           <Inner
-          key={i}
+            key={i}
             i={i}
             entry={entry}
             index={index}
@@ -37,7 +63,7 @@ export function Inner({ entry, i, index, length, setIndex }) {
   ) : (
     <div className={styles.linkWrapper}>
       <Link href="/3">
-      <h1 >...</h1>
+        <h3>Wähle aus folgenden Auswahlmöglichkeiten...</h3>
       </Link>
     </div>
   );

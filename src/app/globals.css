@@ -14,20 +14,20 @@
 }
 
 ::selection {
-  color: inherit; background: none
+  color: inherit;
+  background: none;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-
 }
 
 body {
   font-family: "Protest";
-color: blue; 
-background: rgb(254, 222, 247)
+  color: blue;
+  background: rgb(254, 222, 247);
 }
 
 p {
