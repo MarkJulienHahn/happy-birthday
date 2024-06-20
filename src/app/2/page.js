@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "../page.module.css";
 
+import { use100vh } from "react-div-100vh";
+
 const content = [
   "",
   "Dafür",
@@ -56,8 +58,13 @@ export default function Home() {
 }
 
 export function Inner({ entry, i, index, length, setIndex }) {
+  const height = use100vh();
   return index !== length ? (
-    <div className={styles.typeWrapper} onClick={() => setIndex(index + 1)}>
+    <div
+      className={styles.typeWrapper}
+      style={{ height: height }}
+      onClick={() => setIndex(index + 1)}
+    >
       <h1 style={index == i ? visible : hidden}>{entry}</h1>
     </div>
   ) : (

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import styles from "../page.module.css";
 
+import { use100vh } from "react-div-100vh";
+
 export default function Home() {
   const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [complete, setComplete] = useState(0);
@@ -17,10 +19,11 @@ export default function Home() {
     }
   }, []);
 
+  const height = use100vh();
+
   useEffect(() => {
     complete == 5 && setTimeout(showEnder, 3000);
   }, [complete]);
-
   return (
     <>
       {!ender ? (
@@ -41,7 +44,7 @@ export default function Home() {
           </div>
         </main>
       ) : (
-        <div className={styles.ender}>
+        <div className={styles.ender} style={{ height: height }}>
           <h1>Freu mich auf dich!</h1>
         </div>
       )}
