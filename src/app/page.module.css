@@ -52,7 +52,7 @@
   position: fixed;
   top: 0;
   overflow-y: scroll;
-  padding-top: 10vh;
+  padding-top: 15vh;
   padding-bottom: 2vh;
   z-index: 1;
 }

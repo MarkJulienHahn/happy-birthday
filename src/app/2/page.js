@@ -63,7 +63,7 @@ export function Inner({ entry, i, index, length, setIndex }) {
   ) : (
     <div className={styles.linkWrapper}>
       <Link href="/3">
-        <h3>Wähle aus folgenden Auswahlmöglichkeiten...</h3>
+        <h3>Wähle aus folgenden Optionen...</h3>
       </Link>
     </div>
   );
