@@ -7,7 +7,6 @@ import styles from "../page.module.css";
 import { use100vh } from "react-div-100vh";
 
 const content = [
-  "",
   "Dafür",
   "habe",
   "ich",
