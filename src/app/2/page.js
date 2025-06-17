@@ -7,30 +7,36 @@ import styles from "../page.module.css";
 import { use100vh } from "react-div-100vh";
 
 const content = [
-  "Dafür",
-  "habe",
+  "Happy,",
+  "happpy,",
+  "happppy,",
+  "happpppy,",
+  "Birthday",
+  "mein",
+  "Engel!",
+  "Und",
+  "Auf",
+  "dass",
   "ich",
   "dir",
-  "dieses",
-  "Jahr",
-  "einen",
-  "Konfigurator",
-  "programmiert",
-  "...",
-  "Mit",
-  "dem",
-  "kannst",
-  "du",
-  "dir",
-  "deinen",
-  "eigenen",
-  "perfekten",
-  "Ausflug",
-  "selbst",
-  "zusammen-",
-  "stellen",
+  "noch",
+  "viele,",
+  "vieele,",
+  "vieeele,",
+  "vieeeele,",
+  "weitere",
+  "Geburtstags-",
+  "websiten",
+  "coden",
+  "darf.",
+  "",
+  "Love",
+  "You",
+  "A",
+  "Lot",
   "!",
   "",
+  "<3",
 ];
 
 const visible = { opacity: 1 };
@@ -69,7 +75,7 @@ export function Inner({ entry, i, index, length, setIndex }) {
   ) : (
     <div className={styles.linkWrapper}>
       <Link href="/3">
-        <h3>Wähle aus folgenden Optionen...</h3>
+        <h3>Du kennst den Ablauf: wähle aus worauf du am meisten Lust hast...</h3>
       </Link>
     </div>
   );

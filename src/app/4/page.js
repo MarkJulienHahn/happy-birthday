@@ -45,7 +45,12 @@ export default function Home() {
         </main>
       ) : (
         <div className={styles.ender} style={{ height: height }}>
-          <h1>Freu mich auf dich!</h1>
+          <h1 style={{ fontSize: "8vw", lineHeight: "8.2vw" }}>
+            Ergebnis: <br />Zwei Nächte im Christinenhof & Spa Hotel, Spreewald.
+            <br />
+            <br />
+            Gute Wahl, Pia!
+          </h1>
         </div>
       )}
     </>
